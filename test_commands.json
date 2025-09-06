@@ -1,0 +1,311 @@
+[
+  {
+    "name": "accelerate_from_rest",
+    "instructions": [
+      "F1",
+      "F2",
+      "F2",
+      "BB"
+    ],
+    "description": "Accelerate from 0 to 4, then brake"
+  },
+  {
+    "name": "decelerate_sequence",
+    "instructions": [
+      "F2",
+      "F2",
+      "F1",
+      "F0",
+      "F0"
+    ],
+    "description": "Accelerate then decelerate to 0"
+  },
+  {
+    "name": "reverse_movements",
+    "instructions": [
+      "V1",
+      "V2",
+      "V2",
+      "BB"
+    ],
+    "description": "Reverse accelerate and brake"
+  },
+  {
+    "name": "in_place_rotations",
+    "instructions": [
+      "L",
+      "L",
+      "R",
+      "R"
+    ],
+    "description": "Multiple in-place rotations"
+  },
+  {
+    "name": "moving_rotations_low_momentum",
+    "instructions": [
+      "F1",
+      "F1L",
+      "F1R"
+    ],
+    "description": "Moving rotations with m_eff <= 1"
+  },
+  {
+    "name": "moving_rotations_high_momentum_crash",
+    "instructions": [
+      "F2",
+      "F2",
+      "F2L"
+    ],
+    "description": "Moving rotation with m_eff > 1 (crash expected)"
+  },
+  {
+    "name": "tight_turns_low_momentum",
+    "instructions": [
+      "F1",
+      "F1LT",
+      "F1RT"
+    ],
+    "description": "Tight corner turns with m_eff <= 1"
+  },
+  {
+    "name": "wide_turns_medium_momentum",
+    "instructions": [
+      "F2",
+      "F1",
+      "F1LW",
+      "F1RW"
+    ],
+    "description": "Wide corner turns with m_eff <= 2"
+  },
+  {
+    "name": "invalid_tight_turn_high_momentum",
+    "instructions": [
+      "F2",
+      "F2",
+      "F2LT"
+    ],
+    "description": "Tight turn with m_eff > 1 (crash expected)"
+  },
+  {
+    "name": "direction_change_without_stop",
+    "instructions": [
+      "F2",
+      "V1"
+    ],
+    "description": "Try to reverse without reaching 0 momentum (crash)"
+  },
+  {
+    "name": "invalid_token",
+    "instructions": [
+      "INVALID"
+    ],
+    "description": "Use unrecognized movement token (crash)"
+  },
+  {
+    "name": "rotation_at_momentum",
+    "instructions": [
+      "F1",
+      "L"
+    ],
+    "description": "In-place rotation with momentum != 0 (crash)"
+  },
+  {
+    "name": "simple_path_to_goal",
+    "instructions": [
+      "F2",
+      "F2",
+      "F2",
+      "F2",
+      "F2",
+      "F2",
+      "F2",
+      "F1",
+      "F1",
+      "BB"
+    ],
+    "description": "Attempt to reach goal with forward movements"
+  },
+  {
+    "name": "path_with_turns",
+    "instructions": [
+      "F2",
+      "F2",
+      "F2",
+      "R",
+      "F2",
+      "F2",
+      "F2",
+      "F2",
+      "L",
+      "F2",
+      "F2",
+      "F2",
+      "BB"
+    ],
+    "description": "Path with rotations to navigate"
+  },
+  {
+    "name": "random_test_1",
+    "instructions": [
+      "V1",
+      "V1LW"
+    ],
+    "description": "Random sequence of 2 commands"
+  },
+  {
+    "name": "random_test_2",
+    "instructions": [
+      "V2R",
+      "V0RT",
+      "F1LT",
+      "F1LT",
+      "V2",
+      "F1LT",
+      "F0R",
+      "F1L",
+      "L",
+      "V0R",
+      "V0LT",
+      "F1R",
+      "V1L",
+      "F0LW",
+      "V0L",
+      "V0LT"
+    ],
+    "description": "Random sequence of 16 commands"
+  },
+  {
+    "name": "random_test_3",
+    "instructions": [
+      "V2LT",
+      "F0LW",
+      "F0RW",
+      "F1",
+      "L",
+      "V1L",
+      "F0LW",
+      "V2L",
+      "F1LT",
+      "V1R",
+      "R",
+      "F2L",
+      "V1RW",
+      "V2LT",
+      "V2",
+      "V1L",
+      "V2LT",
+      "F0LW"
+    ],
+    "description": "Random sequence of 18 commands"
+  },
+  {
+    "name": "random_test_4",
+    "instructions": [
+      "V2L"
+    ],
+    "description": "Random sequence of 1 commands"
+  },
+  {
+    "name": "random_test_5",
+    "instructions": [
+      "F2LW",
+      "F1R",
+      "V0RW",
+      "V0RW"
+    ],
+    "description": "Random sequence of 4 commands"
+  },
+  {
+    "name": "random_test_6",
+    "instructions": [
+      "F2LW",
+      "F2RT"
+    ],
+    "description": "Random sequence of 2 commands"
+  },
+  {
+    "name": "random_test_7",
+    "instructions": [
+      "F2",
+      "F2R",
+      "BBR",
+      "BBR",
+      "BB",
+      "V1R",
+      "F2RT",
+      "V0R",
+      "BB",
+      "F1L",
+      "R",
+      "F1",
+      "V1R"
+    ],
+    "description": "Random sequence of 13 commands"
+  },
+  {
+    "name": "random_test_8",
+    "instructions": [
+      "F2",
+      "F2RT",
+      "V1LT",
+      "V0L",
+      "V2RW",
+      "F2L",
+      "F2RT",
+      "F2RT",
+      "V0L",
+      "V0LT",
+      "F0LW",
+      "V0R",
+      "R",
+      "F2L",
+      "V0LT",
+      "F1LW",
+      "BBR",
+      "V2",
+      "F0LT"
+    ],
+    "description": "Random sequence of 19 commands"
+  },
+  {
+    "name": "random_test_9",
+    "instructions": [
+      "V2R",
+      "F2",
+      "F1R",
+      "L",
+      "V1",
+      "F2LT",
+      "V1LT",
+      "F2L",
+      "F2RW",
+      "F0LT",
+      "F1R",
+      "F1RW",
+      "V2LW",
+      "F1",
+      "V1",
+      "F0R"
+    ],
+    "description": "Random sequence of 16 commands"
+  },
+  {
+    "name": "random_test_10",
+    "instructions": [
+      "V2RW",
+      "V2R",
+      "V2RW",
+      "F0LW",
+      "V2R",
+      "V2RT",
+      "F0RT",
+      "V2",
+      "V2RW",
+      "R",
+      "V1RW",
+      "F1LW",
+      "F0LT"
+    ],
+    "description": "Random sequence of 13 commands"
+  }
+]
